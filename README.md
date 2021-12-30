@@ -62,5 +62,7 @@ result.export(toPath: "/path/to/new_sound.wav")
 ```
 
 ## Warning ⚠️ 
-Due to limitations with `libsndfile`, it may be necessary to restrict the build architecture. In Xcode, this can be done by editing the target configuration such that `General>Architectures>Build Active Architecture Only` is true
+By default, Xcode will attempt to compile projects as universal binaries. However, due to limitations with `libsndfile`, this behavior must be disabled. This can be done by editing the target configuration such that `General>Architectures>Build Active Architecture Only` is true
+
+This is not necessary when compiling without Xcode, such as with the Swift Package Manager
 
