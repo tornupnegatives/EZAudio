@@ -1,0 +1,17 @@
+module Samplerate [system] {
+    header "samplerate.h"
+    link "samplerate"
+    export *
+}
+
+module Sndfile [system] {
+    header "sndfile.h"
+    link "sndfile"
+    export *
+}
+
+module Resampler {
+    header "resampler.h"
+    link "resampler"
+    export *
+}
