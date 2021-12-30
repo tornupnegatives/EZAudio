@@ -13,7 +13,7 @@
 #include "samplerate.h"
 
 /// Initialize a libsamplerate resampler
-SRC_DATA* __resampler_init__(int target_rate, int sample_rate, int frames, int channels, float *samples) {
+static SRC_DATA* __resampler_init__(int target_rate, int sample_rate, int frames, int channels, float *samples) {
     double ratio;
     int src_frames;
     float* src_samples;

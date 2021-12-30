@@ -12,6 +12,5 @@ module Sndfile [system] {
 
 module Resampler {
     header "resampler.h"
-    link "resampler"
     export *
 }
