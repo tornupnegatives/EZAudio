@@ -1,6 +1,6 @@
 # EZAudio 🔈
 
-EZAudio is a thin Swift wrapper around `libsndfile` and `libsamplerate`. It provides a simple, cross-platform interface for audio IO without the need to pass around pointers to arcane and mysterious structs.
+EZAudio is a thin Swift wrapper around `libsndfile` and `libsamplerate`. It provides a simple, cross-platform interface for audio IO without the need to pass around pointers to arcane and mysterious structs
 
 ## Usage
 
@@ -46,4 +46,7 @@ audioEditor.resample(targetSampleRate: 8000)
 var result = audioEditor.result
 result.export(toPath: "/path/to/new_sound.wav")
 ```
+
+## Warning ⚠️ 
+Due to limitations with `libsndfile`, it may be necessary to restrict the build architecture. In Xcode, this can be done by editing the target configuration such that `General>Architectures>Build Active Architecture Only` is true
 
