@@ -2,6 +2,20 @@
 
 EZAudio is a thin Swift wrapper around `libsndfile` and `libsamplerate`. It provides a simple, cross-platform interface for audio IO without the need to pass around pointers to arcane and mysterious structs
 
+Tested on macOS and Ubuntu
+
+## Dependencies
+
+EZAudio depends on `libsndfile` and `libsamplerate`. On macOS, both can be installed via Hombrew:
+```shell
+$ brew install libsndfile libsamplerate
+```
+
+On Linux:
+```shell
+$ sudo apt install libsndfile-dev libsamplerate-dev
+```
+
 ## Usage
 
 ### Swift Package Manager
@@ -15,7 +29,7 @@ import PackageDescription
 let package = Package(
   name:  "myProject",
   dependencies: [
-    .package(url: "https://github.com/tornupnegatives/EZAudio.git", from: "1.0.0"),
+    .package(url: "https://github.com/tornupnegatives/EZAudio.git", .branch("main")),
   ],
   targets: [
     .target(
