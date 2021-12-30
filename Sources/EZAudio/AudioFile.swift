@@ -8,14 +8,12 @@
 import Foundation
 import Sndfile
 
-/**
- The `AudioFile` class stores and performs basic IO on audio metadata and floating-point samples
- 
- `AudioFile` objects thinly wrap the `SF_INFO` struct from libsndfile, making all useful properties of the struct available and editable
- 
- - warning: While it is possible to edit `AudioFile` metadata  and samples directly, it is not recommended.
- Please see the `AudioEditor` class, which can safely modify `AudioFile` objects
- */
+/// The `AudioFile` class stores and performs basic IO on audio metadata and floating-point samples
+///
+/// `AudioFile` objects thinly wrap the `SF_INFO` struct from libsndfile, making all useful properties of the struct available and editable
+///
+/// - warning: While it is possible to edit `AudioFile` metadata  and samples directly, it is not recommended.
+/// Please see the `AudioEditor` class, which can safely modify `AudioFile` objects
 public class AudioFile {
     private var sf_info: SF_INFO
     private var _samples: [Float]
