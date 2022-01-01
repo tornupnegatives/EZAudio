@@ -29,7 +29,7 @@ import PackageDescription
 let package = Package(
   name:  "myProject",
   dependencies: [
-    .package(url: "https://github.com/tornupnegatives/EZAudio.git", .branch("main")),
+    .package(url: "https://github.com/tornupnegatives/EZAudio.git", from: "1.0.0"),
   ],
   targets: [
     .target(
